@@ -40,6 +40,7 @@ export async function generateDefraIdToken(session, host, cache) {
     id: registration.userId,
     sub: registration.userId,
     iss: host + oidcConfig.issuerBase, // issuer
+    aud: oidcConfig.clientId,
     correlationId: randomUUID(),
     sessionId: session.sessionId,
     contactId: registration.contactId,
